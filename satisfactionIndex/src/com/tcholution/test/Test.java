@@ -12,18 +12,14 @@ import com.techolution.satisfactionIndex.impl.Menu;
 public class Test {
 
 	public static void main(String[] args) throws Exception {
-		Scanner scanner = new Scanner(System.in);
-		System.out.println("Enter the total time have to eat dish'es ");
-		int totalTime = scanner.nextInt();
-		
 		IMenu menu = new Menu();
-		ICustomer customer = new Customer(totalTime);
+		ICustomer customer = new Customer();
 		
 		ICalculateSatisfactionIndex cSI = new CalculateSatisfactionIndex(menu,customer);
 		
 		cSI.setTimeTakenAndSatisfactionAmount();
 		int result = cSI.calculateMaxSatisfactionIndex();
-		System.out.println("Maximum satisfaction amount to eat dishes in "+ totalTime + " minute is "+result);
+		System.out.println("Maximum satisfaction amount to eat dishes in "+customer.getTotaltime()+ " is "+result);
 
 	}
 

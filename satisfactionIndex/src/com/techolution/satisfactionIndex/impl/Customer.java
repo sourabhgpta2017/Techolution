@@ -10,9 +10,9 @@ public class Customer implements ICustomer   {
 	
 	private int Totaltime;
 	
-	public Customer(int totaltime) {
+	public Customer() {
 		Name="Gordon Ramsey" ;
-		this.Totaltime = totaltime;
+		
 	}
 	
 	@Override

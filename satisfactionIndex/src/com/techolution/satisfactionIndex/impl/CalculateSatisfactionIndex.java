@@ -35,6 +35,9 @@ public class CalculateSatisfactionIndex implements ICalculateSatisfactionIndex {
 		try {
 			bufferedReader = new BufferedReader(new FileReader("src/data.txt"));
 			String[] ss = null;
+			sCurrentLine = bufferedReader.readLine();
+			ss = sCurrentLine.split(" ");
+			customer.setTotaltime(Integer.parseInt(ss[0]));
 			while ((sCurrentLine = bufferedReader.readLine()) != null) {
 				ss = sCurrentLine.split(" ");
 				timeTaken.add(Integer.parseInt(ss[1]));
